@@ -6,6 +6,7 @@ SimpleCov.start do
 end
 
 require 'minitest/autorun'
+require_relative "../lib/server"
 require_relative '../lib/record'
 
 def record_matches record, last, first, gender, color, dob
@@ -14,4 +15,10 @@ def record_matches record, last, first, gender, color, dob
   record.gender.must_equal         gender
   record.favorite_color.must_equal color
   record.date_of_birth.must_equal  dob
+end
+
+def assert_sorted_records records, *names
+  records.each_with_index do |record, index|
+    record.full_name.must_equal names[index]
+  end
 end

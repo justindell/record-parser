@@ -1,0 +1,4 @@
+Smith John Male Orange 1986-01-01
+Roe Jane Female Blue 1987-01-01
+Anderson June Female Blue 1986-05-15
+Brown Jim Male Blue 1986-05-01
