@@ -19,9 +19,16 @@ describe Record do
   end
 
   describe 'when displaying a record' do
-    it 'should be ordered json' do
-      record = Record.new('Smith John Male Orange 1986-08-11')
-      record.to_json.must_equal({'last_name' => 'Smith', 'first_name' => 'John', 'gender' => 'Male', 'date_of_birth' => '08/11/1986', 'favorite_color' => 'Orange' }.to_json)
+    def setup
+      @record = Record.new('Smith John Male Orange 1986-08-11')
+    end
+
+    it 'should be json' do
+      @record.to_json.must_equal({'last_name' => 'Smith', 'first_name' => 'John', 'gender' => 'Male', 'date_of_birth' => '08/11/1986', 'favorite_color' => 'Orange' }.to_json)
+    end
+
+    it 'should be a formatted string' do
+      @record.to_s.must_equal 'Smith, John, Male, 08/11/1986, Orange'
     end
   end
 end

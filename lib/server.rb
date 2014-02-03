@@ -24,7 +24,7 @@ class Server
     @records.sort{|a,b| a.date_of_birth <=> b.date_of_birth}
   end
 
-  def records_by_last_name
+  def records_by_name
     @records.sort{|a,b| b.last_name <=> a.last_name}
   end
 end

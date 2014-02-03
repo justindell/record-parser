@@ -19,11 +19,15 @@ class Record
     first_name + ' ' + last_name
   end
 
+  def to_s
+    "#{last_name}, #{first_name}, #{gender}, #{date_of_birth.strftime('%m/%d/%Y')}, #{favorite_color}"
+  end
+
   def to_json *opts
-    {:last_name => last_name,
-     :first_name => first_name,
-     :gender => gender,
-     :date_of_birth => date_of_birth.strftime('%m/%d/%Y'),
-     :favorite_color => favorite_color}.to_json
+    { last_name:      last_name,
+      first_name:     first_name,
+      gender:         gender,
+      date_of_birth:  date_of_birth.strftime('%m/%d/%Y'),
+      favorite_color: favorite_color }.to_json
   end
 end

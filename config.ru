@@ -24,7 +24,7 @@ class API < Grape::API
     end
 
     get :name do
-      SERVER.records_by_last_name
+      SERVER.records_by_name
     end
   end
 end

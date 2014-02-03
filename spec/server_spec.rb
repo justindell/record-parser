@@ -19,7 +19,7 @@ describe Server do
       assert_sorted_records @server.records_by_birth_date, 'John Smith', 'Jim Brown', 'June Anderson', 'Jane Roe'
     end
     it 'must sort by last name descending' do
-      assert_sorted_records @server.records_by_last_name, 'John Smith', 'Jane Roe', 'Jim Brown', 'June Anderson'
+      assert_sorted_records @server.records_by_name, 'John Smith', 'Jane Roe', 'Jim Brown', 'June Anderson'
     end
   end
 end
