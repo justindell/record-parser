@@ -9,7 +9,7 @@ require 'minitest/autorun'
 require_relative "../lib/server"
 require_relative '../lib/record'
 
-def record_matches record, last, first, gender, color, dob
+def matches_record record, last, first, gender, color, dob
   record.first_name.must_equal     first
   record.last_name.must_equal      last
   record.gender.must_equal         gender
